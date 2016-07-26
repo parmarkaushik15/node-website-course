@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>My Node Website</title>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <header>
+        <nav class="navbar navbar-inverse">
+        <div class="container">
+            <a class="navbar-brand" href="/">My Site</a>
+
+            <ul class="nav navbar-nav">
+                <li><a href="/">Home</a></li>
+                <li><a href="/about">About</a></li>
+                <li><a href="/contact">Contact</a></li>
+            </ul>
+        </div>
+        </nav>
+    </header> 
+
+    <main>
+        <div class="container">
+        
+        <div class="row">
+        <div class="col-sm-6 col-sm-offset-3">
+            <h2>Contact Us!</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempore quae ut officia numquam nisi delectus tenetur ipsum provident hic optio asperiores nemo iure fugit fugiat quod, culpa et consequatur, odit?</p>
+
+            <form action="/contact" method="POST">
+                
+                <div class="form-group">
+                    <label>Name</label>
+                    <input type="text" name="name" class="form-control">
+                </div>
+
+                <div class="form-group">
+                    <label>Email</label>
+                    <input type="email" name="email" class="form-control">
+                </div>
+
+                <div class="form-group">
+                    <label>Your Message</label>
+                    <textarea name="message" class="form-control" rows="10"></textarea>
+                </div>
+
+                <div class="form-group text-right">
+                    <button type="submit" class="btn btn-primary btn-lg">Send</button>
+                </div>
+            </form>
+
+        </div>
+        </div>
+            
+        </div>
+    </main>
+
+    <footer>
+        Awesome Site. Copyright &copy; 2016
+    </footer>
+    
+</body>
+</html>
