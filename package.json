@@ -1,5 +1,5 @@
 {
-  "name": "reference-node",
+  "name": "node-website-course",
   "version": "1.0.0",
   "description": "",
   "main": "server.js",
@@ -13,6 +13,6 @@
     "express": "^4.14.0",
     "express-ejs-layouts": "^2.2.0",
     "morgan": "~1.7.0",
-    "body-parser": "~1.15.1",
+    "body-parser": "~1.15.1"
   }
 }
