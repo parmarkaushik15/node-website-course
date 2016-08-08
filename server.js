@@ -1,7 +1,5 @@
-'use strict';
-
 // grab dependencies ================
-var express      = require('express'),
+const express    = require('express'),
   app            = express(),
   port           = process.env.PORT || 8080,
   expressLayouts = require('express-ejs-layouts'),
@@ -23,36 +21,9 @@ app.use(expressLayouts);
 app.use(express.static(__dirname + '/public'));
 
 // route our app ====================
-
-// home page
-app.get('/', function(req, res) {
-  res.sendFile(__dirname + '/index.html');
-});
-
-// about page
-app.get('/about', function(req, res) {
-  // list of users
-  let users = [
-    { name: 'Chris', email: 'chris@scotch.io', avatar: '' },
-    { name: 'Nick', email: 'nick@scotch.io', avatar: '' },
-    { name: 'Holly', email: 'holly@scotch.io', avatar: '' },
-    { name: 'Ado', email: 'ado@scotch.io', avatar: '' }
-  ];
-
-  res.sendFile(__dirname + '/index.html', { users: users });
-});
-
-// contact page
-app.get('/contact', function(req, res) {
-  res.sendFile(__dirname + '/contact.html');
-});
-
-// process the contact page
-app.post('/contact', function(req, res) {
-  console.log(req.body);
-});
+app.use(require('./app/routes'));
 
 // start the app server =============
-app.listen(port, function() {
+app.listen(port, () => {
   console.log('App listening on http://localhost:' + port);
 });
